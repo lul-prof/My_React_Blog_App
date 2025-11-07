@@ -4,7 +4,7 @@ import { BrowserRouter,Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Posts from './components/Blog/Posts'
 import Detail from './components/Blog/Detail'
-import CreateBlog from './components/Blog/createBlog'
+import CreateBlog from './components/Blog/CreateBlog'
 import Footer from './components/Footer/Footer'
 
 function App() {
