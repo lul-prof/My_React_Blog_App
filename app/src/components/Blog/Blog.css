@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+.posts
+{
+    width: 100%;
+    
+}
+.posts .search-container
+{
+ justify-self: center;
+ padding: 5px;
+ margin: auto;
+ 
+}
+.search-container input{
+    border: 2px solid #8AB8B4;
+    width: 400px;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border-top: 0;
+    border-right: 0;
+    outline: none;
+    background: transparent;
+    border-left: 0;
+    cursor: pointer;
+}
+.search-container input::placeholder
+{
+    color: white;
+    text-align: center;
+}
+
+.posts-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 100px;
+}
+.blog
+{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+    padding: 10px;
+}
+.blog:hover{
+    transform: scale(1.08);
+}
+.blog .blog-img{
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.blog-title
+{
+    padding: 0px 8px;
+    background-image: linear-gradient(to right,#8AB8B4, #95DBD3);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+
+}
+.blog-title h2
+{
+    color: black;
+    font-size:small;
+}
+.blog-title h3{
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.icon
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 100px;
+    border-bottom:2px solid #8AB8B4;
+
+}
+
+.link
+{
+    text-decoration: none;
+}
+.link p:hover{
+    text-decoration: underline;
+    color: black;
+}
+.form-container{
+    width: 400px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin: 100px auto;
+    padding: 20px;
+}
+.form-container form{
+    padding: 30px;
+    background-color: #8AB8B4;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-container form input[type="text"]{
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 2px solid black;
+    width: 200px;
+    outline: none;
+    margin-bottom: 20px;  
+}
+
+.form-container form input[type="file"]{
+    background-color: white;
+    width: 210px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form-container form button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius:10px ;
+    justify-self: center;
+    align-self: center;
+    margin:10px 60px;
+}
+
+.detail-post
+{
+    width: 80%;
+    height: 100%;
+    justify-self: center;
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 10px;
+    margin: 50px auto;
+    cursor: pointer;
+}
+.post-title
+{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.post-title h2{
+    text-align: center;
+    font-weight:bold ;
+    font-size: 40px;
+}
+.detail-post .image-post
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.detail-post .image-post img{
+    width:400px;
+}
+
+

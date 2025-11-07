@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(135deg, #8AB8B4 0%, #95DBD3 100%);
+    width: 100%;
+    border-radius: 15px;
+    margin: 10px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-bar:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-title h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-list ul li {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.nav-list ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #1a1a1a;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-list ul li:hover::after {
+    width: 80%;
+}
+
+.nav-bar .active {
+    background-color: #1a1a1a;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar .active::after {
+    display: none;
+}
+
+.nav-bar .active:hover {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.nav-list ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .nav-title h1 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-list ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-list ul li {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        padding: 1rem;
+    }
+    
+    .nav-list ul {
+        gap: 0.5rem;
+    }
+    
+    .nav-list ul li {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
